@@ -39,6 +39,8 @@ margin-right:auto;
 
 p {
 text-align: left;
+margin-left: 20px;
+font-size: 110%;
 }
 
 .input-group-text{
