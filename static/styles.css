@@ -1,0 +1,87 @@
+body {
+background-color: rgb(95 84 66 / 55%); /*фон*/
+margin: 15px;
+}
+h1.headerstyle {
+color: #f3c775bf; /*цвет текста*/
+background-color: rgba(0, 0, 0, 0.25); /*фон*/
+padding: 10px; /*Свойство padding — или внутренний отступ —
+позволяет оттолкнуть контент от границ родительского элемента.
+Само свойство padding это шорткат, позволяющий задать
+отступы сразу со всех четырёх сторон. Можно управлять отступами
+по отдельности при помощи свойств padding-top , padding-left ,
+padding-right , padding-bottom*/
+border-radius: 25px;  /*закруглённые углы*/
+text-align: center; /*текст по центру*/
+height: auto;
+font-size: 200%;
+max-width: 600px;
+margin: 15px;
+margin-left: auto;
+margin-right:auto;
+}
+
+.myblock {
+color: #f3c775bf; /*цвет текста*/
+background-color: rgba(0, 0, 0, 0.25); /*фон*/
+padding: 10px;
+border-radius: 25px;  /*закруглённые углы*/
+text-align: center; /*текст по центру*/
+height: auto;
+font-size: 100%;
+font-weight: bold;
+max-width: 600px;
+margin: 15px;
+margin-left: auto;
+margin-right:auto;
+}
+
+
+p {
+text-align: left;
+}
+
+.input-group-text{
+border-radius: 25px;
+color: #e9b85e;
+background-color: #a7a197;
+border: 1px solid #7d7971;
+font-weight: bold;
+}
+
+.form-control {
+color: #e9b85e;
+background-color: #a7a197;
+border: 1px solid #7d7971;
+font-weight: bold;
+}
+
+.form-control:focus {
+color: #e9b85e;
+background-color: #a7a197;
+border: 1px solid #7d7971;
+font-weight: bold;
+}
+
+.mybtn1 {
+width: 75vh;
+margin-top: 15px;
+border-radius: 25px;
+}
+
+/*.count-form{
+    border-right: 25px;
+    border-bottom-right-radius: 25px;
+} */
+
+.progress {
+background-color: #a7a197;
+height: 30px;
+border-radius: 25px;
+}
+
+.bg-success {
+background-color: rgb(213 179 116);
+}
+
+.
