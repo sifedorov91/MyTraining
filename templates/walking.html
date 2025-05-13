@@ -10,26 +10,31 @@
     <link rel="stylesheet" href="static/styles.css"/>
     </head>
 <body>
-<h1 class="headerstyle">Журнал отжиманий</h1>
+<h1 class="headerstyle">Журнал ходьбы</h1>
 <div>
     <div class="myblock">
          <p>Количество тренировок: {{train_count}} </p>
-         <p>Количество отжиманий: {{step_count}} </p>
+         <p>Количество шагов: {{step_count}} </p>
+         <p>Время: {{train_time // 60}} часов {{train_time % 60}} минут </p>
     </div>
     <div class="myblock">
-        <p>Осталось: {{90 - train_count}} дня </p>
-        <p>Осталось: {{9000 - step_count}} раз </p>
+        <p id="day">Осталось: {{90 - train_count}} дня </p>
         <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar bg-success" style="width: {{progres}}%"></div>
+            <div class="progress-bar bg-success" style="width: {{progres}}%" id="progress_bar"></div>
         </div>
     </div>
 
     <div class="myblock">
           <form method="post" class="form">
-             <div class="conteiner">
-                 <span class="item item1">Дата и количество</span>
-                 <input type="date" name="date" value="{{datenow}}" aria-label="First name" class="item item2">
-                 <input type="number" name="count" value=0 aria-label="Last name" class="item item3">
+              <div class="conteiner1">
+                  <label class="items2">Дата</label>
+                  <label class="items2">Шаги</label>
+                  <label class="items2">Время(мин.)</label>
+              </div>
+             <div class="conteiner1">
+                 <input  type="date" name="date" value="{{datenow}}" class="items items1">
+                 <input type="number" name="count" value= 0 class="items items2" id="step_count">
+                 <input type="number" name="vremya" value= 0 class="items items3" id="time">
 
              </div>
               <div class="mybtn1">
@@ -41,5 +46,6 @@
          </div>
 
 </div>
+<script src="/static/script.js"></script>
 </body>
 </html>
