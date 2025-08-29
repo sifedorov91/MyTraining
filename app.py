@@ -10,7 +10,7 @@ WALKING = 'walking_log.json'  #Имя файла с ходьбой
 def pushups():
     if request.method == "POST":
         d = mytrain.open_json(PUSHUPS) #распаковываем файл в словарь
-        if int(request.form['count']) == 0:
+        if request.form['count'] == '' or int(request.form['count']) == 0:
             if request.form['date'] in d:
                 d.pop(request.form['date'])
         else:
@@ -20,9 +20,11 @@ def pushups():
     step_count = sum(mytrain.open_json(PUSHUPS).values()) # Распаковываем словарь и считаем количество отжиманий
     progres = mytrain.progress(train_count, 90)  # Для прогрессбара
     datenow = str(datetime.today().date())  # Для автозаполнения на форме
+    days_left = mytrain.days_left(mytrain.open_json(PUSHUPS))
+    per_day = round((9000 - step_count)/days_left)
     return render_template('pushups.html', train_count=train_count,
                            step_count=step_count, progres=progres,
-                           datenow=datenow)
+                           datenow=datenow, daysleft=days_left, perday=per_day)
 
 
 @app.route('/walking', methods=["GET", "POST"])
@@ -30,7 +32,7 @@ def walking():
     if request.method == "POST":
         print(request.form['date'], request.form['count'], request.form['vremya'])
         d = mytrain.open_json(WALKING) #распаковываем файл в словарь
-        if int(request.form['count']) == 0:
+        if request.form['count'] == '' or int(request.form['count']) == 0:
             if request.form['date'] in d:
                 d.pop(request.form['date'])
         else:
@@ -41,9 +43,26 @@ def walking():
     train_time = sum([i[1] for i in mytrain.open_json(WALKING).values()])
     progres = mytrain.progress(train_count, 90)  # Для прогрессбара
     datenow = str(datetime.today().date())  # Для автозаполнения на форме
+    walk_data = mytrain.open_json(WALKING)
+    walk_stat = mytrain.walk_statistic(walk_data)
     return render_template('walking.html', train_count=train_count,
                            step_count=step_count, progres=progres,
-                           datenow=datenow, train_time=train_time)
+                           datenow=datenow, train_time=train_time, walk_stat=walk_data)
+
+@app.route('/animation', methods=['GET'])
+def animation():
+    return render_template('animation.html')
+
+
+@app.route('/grid', methods=['GET'])
+def gridtest():
+    return render_template('gridtest.html')
+
+
+@app.route('/', methods=['GET'])
+def index():
+    return render_template('index.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True, host='192.168.1.113', port=1234)

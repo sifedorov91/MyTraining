@@ -1,6 +1,6 @@
 import json
 import os.path
-from datetime import datetime
+from datetime import datetime, timedelta
 
 
 def open_json(train_name: str):
@@ -26,3 +26,25 @@ def progress(fact, target):
     return res if res > 3 else 3
 
 
+def walk_statistic(data):
+    # stat = 'Дата       |Шаги   |Время\n'
+    # for k, v in data.items():
+    #     date = datetime.strptime(k, '%Y-%m-%d')
+    #     stat += f'{date:%d.%m.%Y} |{v[0]}    |{v[1]} мин.\n'
+    # return stat
+    stat = ''
+    for k, v in data.items():
+        date = datetime.strptime(k, '%Y-%m-%d')
+        stat += f'{date:%d.%m.%Y} {v[0]} {v[1]},'
+    return stat
+
+
+def days_left(data: dict):
+    dates = sorted(data.keys())
+    target_days = 90
+    target_end_date = datetime.strptime(dates[0], "%Y-%m-%d") + timedelta(days=target_days)
+    return (target_end_date - datetime.now()).days + 1
+
+
+# data = open_json('mytrain_log.json')
+# print(days_left(data))

@@ -10,36 +10,40 @@
     <link rel="stylesheet" href="static/styles.css"/>
     </head>
 <body>
-<h1 class="headerstyle">Журнал отжиманий</h1>
-<div>
+<div class="main">
+    <div class="myblock">
+        <a class="back" href="http://192.168.1.113:1234/">←</a>
+        <p class="back">back</p>
+        <img src="/static/pushupE.png">
+    </div>
     <div class="myblock">
          <p>Количество тренировок: {{train_count}} </p>
          <p>Количество отжиманий: {{step_count}} </p>
-    </div>
-    <div class="myblock">
-        <p>Осталось: {{90 - train_count}} дня </p>
-        <p>Осталось: {{9000 - step_count}} раз </p>
-        <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar bg-success" style="width: {{progres}}%"></div>
+         <p>Для достижения цели: {{perday}} раз в день </p>
+               <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar bg-success" id="progress_bar" style="width: {{progres}}%">
+                <p>Осталось: {{daysleft}} дней / {{9000 - step_count}} раз</p>
+            </div>
         </div>
     </div>
 
-    <div class="myblock">
-          <form method="post" class="form">
-             <div class="conteiner">
-                 <span class="item item1">Дата и количество</span>
-                 <input type="date" name="date" value="{{datenow}}" aria-label="First name" class="item item2">
-                 <input type="number" name="count" value=0 aria-label="Last name" class="item item3">
-
+    <div class="myblock" id="formblock">
+        <form method="post" class="form">
+              <div class="conteiner1">
+                  <label class="items2">Дата</label>
+                  <label class="items2">Количество</label>
+              </div>
+             <div class="conteiner1">
+                <input  type="date" name="date" value="{{datenow}}" class="items items1">
+                <input type="number" name="count" value= 0 class="items items3" id="step_count">
              </div>
               <div class="mybtn1">
                     <button type="submit" class="mybtn">Отправить результат</button>
               </div>
-
           </form>
-
-         </div>
+    </div>
 
 </div>
+<script src="static/script_pushups.js"></script>
 </body>
 </html>
