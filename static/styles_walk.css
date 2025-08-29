@@ -1,0 +1,285 @@
+body {
+position: relative;
+background-color: rgb(95 84 66 / 55%); /*фон*/
+margin: 15px;
+
+}
+h1.headerstyle {
+display: flex;
+justify-content: center;
+color: #f3c775bf; /*цвет текста*/
+background-color: rgba(0, 0, 0, 0.25); /*фон*/
+padding: 10px; /*Свойство padding — или внутренний отступ —
+позволяет оттолкнуть контент от границ родительского элемента.
+Само свойство padding это шорткат, позволяющий задать
+отступы сразу со всех четырёх сторон. Можно управлять отступами
+по отдельности при помощи свойств padding-top , padding-left ,
+padding-right , padding-bottom*/
+border-radius: 25px;  /*закруглённые углы*/
+text-align: center; /*текст по центру*/
+height: auto;
+font-size: 200%;
+max-width: 600px;
+margin: 15px;
+margin-left: auto;
+margin-right:auto;
+box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.myblock {
+color: #f3c775bf; /*цвет текста*/
+background-color: rgba(0, 0, 0, 0.25); /*фон*/
+padding: 10px;
+border-radius: 25px;  /*закруглённые углы*/
+text-align: center; /*текст по центру*/
+height: auto;
+font-size: 100%;
+font-weight: bold;
+max-width: 600px;
+margin: 15px;
+margin-left: auto;
+margin-right:auto;
+box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+opacity: 0.99;
+transition: 500ms;
+}
+
+
+p {
+text-align: left;
+margin-left: 20px;
+font-size: 110%;
+}
+
+.input-group-text{
+border-radius: 25px;
+color: #e9b85e;
+background-color: #a7a197;
+border: 1px solid #7d7971;
+font-weight: bold;
+}
+
+.form-control {
+color: #e9b85e;
+background-color: #a7a197;
+border: 1px solid #7d7971;
+font-weight: bold;
+}
+
+.form-control:focus {
+color: #e9b85e;
+background-color: #a7a197;
+border: 1px solid #7d7971;
+font-weight: bold;
+}
+
+.mybtn1 {
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: 15px;
+border-radius: 25px;
+}
+
+
+.progress {
+background-color: #a7a197;
+height: 30px;
+border-radius: 25px;
+}
+
+.bg-success {
+    --bs-bg-opacity: 1;
+    background-color: rgb(213 179 116) !important;
+}
+
+.progress-bar {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ overflow: hidden;
+ color: #fff;
+ text-align: center;
+ white-space: nowrap;
+ background-color: #0d6efd;
+ transition: width 0.6s ease;
+ height: 30px;
+ border-bottom-left-radius: 25px;
+ border-top-left-radius: 25px;
+}
+@media(min-width: 97%){
+.progress-bar {
+ border-bottom-right-radius: 25px;
+ border-top-right-radius: 25px;
+}
+}
+.conteiner {
+display: flex;
+}
+
+.item{
+color: #e9b85e;
+background-color: #a7a197;
+border: 1px solid #7d7971;
+font-weight: bold;
+}
+
+.item1{
+display: block;
+box-sizing: border-box;
+border-bottom-left-radius: 25px;
+border-top-left-radius: 25px;
+
+}
+
+.item3{
+display: block;
+box-sizing: border-box;
+border-bottom-right-radius: 25px;
+border-top-right-radius: 25px;
+width: 10em;
+border-bottom-left-radius: 0px;
+border-top-left-radius: 0px;
+}
+.item2{
+width: 10em;
+border-radius: 0px;
+}
+
+@keyframes light {
+from {
+  box-shadow: 0px 0px 0px 0px rgb(167 161 151)
+}
+to {
+    box-shadow: 0px 0px 10px 0px rgb(167 161 151);
+ }
+}
+.mybtn {
+border-radius: 25px;
+height: 7vh;
+width: 50vw;
+max-width: 300px;
+border: 1px solid #7d7971;
+background-color: #d5b374;
+font-weight: bold;
+font-size: 110%;
+box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+/*box-shadow: 0px 0px 0px 0px rgb(209 0 255 / 49%); */
+/*animation: light 500ms infinite alternate;*/
+margin-bottom: 8.5px;
+}
+
+.form {
+box-sizing:border-box;
+}
+
+.conteiner1 {
+display: flex;
+position: relative;
+justify-content: center;
+}
+
+.items{
+color: #e9b85e;
+background-color: #a7a197;
+border: 1px solid #7d7971;
+font-weight: bold;
+font-size: 100%;
+/*height: 3vh;*/
+}
+
+.items1{
+/*display: block;
+box-sizing: border-box; */
+border-bottom-left-radius: 25px;
+border-top-left-radius: 25px;
+border-bottom-right-radius: 0px;
+border-top-right-radius: 0px;
+width: 45%;
+text-align: center;
+}
+
+.items3{
+/* display: block;
+box-sizing: border-box;  */
+border-bottom-right-radius: 25px;
+border-top-right-radius: 25px;
+width: 25%;
+border-bottom-left-radius: 0px;
+border-top-left-radius: 0px;
+min-height: 30px;
+}
+.items2{
+width: 30%;
+border-radius: 0px;
+min-height: 30px;
+}
+
+.footimg{
+position: absolute;
+left: 15px;
+width: 90%;
+height: 490px;
+margin: 0 auto;
+margin-top: 15px;
+opacity: 0.15;
+}
+
+table {
+  table-layout: fixed;
+  width: 95%;
+  border-collapse: collapse;
+  border: 1px solid #d4b375;
+  place-self: center;
+  margin-bottom: 5px;
+  }
+
+ #statistic{
+  display: none;
+  transition: 2000ms;
+  }
+.stat.myblock{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+#statP {
+margin-left: 0px;
+padding: 2px;
+margin: 5px;
+}
+
+#formBlock {
+display: block;
+}
+
+#progressblock {
+display: block;
+}
+
+.gridconteiner{
+display:grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-column-gap: 0px;
+width: 80vw;
+}
+
+a {
+outline: none;
+text-decoration: none;
+color:#f3c775bf;
+z-index: 1;
+}
+
+@keyframes light {
+from {
+  box-shadow: 0px 0px 0px 0px rgb(167 161 151)
+}
+to {
+    box-shadow: 0px 0px 12px 1px rgb(255 127 73 / 74%);
+ }
+}
+.mybtn:hover {
+animation: light 1000ms infinite alternate;
+}

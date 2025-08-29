@@ -1,0 +1,135 @@
+body {
+--maxwidth: 500px;
+background-color: rgb(95 84 66 / 55%); /*фон*/
+margin: 15px;
+/*font-family: Andale Mono, monospace;*/
+/*background-image: url('/static/fon.jpg');*/
+}
+
+div.progress p{
+color: black;
+padding: 5px;
+font-weight: bold;
+}
+
+.container {
+display: grid;
+grid-template-columns: repeat(6, 1fr);
+grid-template-rows: repeat(4, 1fr);
+gap: 10px 10px;
+max-width: var(--maxwidth);
+width: auto;
+margin-left: auto;
+margin-right: auto;
+}
+
+.block {
+font-size: 120%;
+background-color: #95156952;
+border-radius: 25px;
+text-align: center;
+opacity: 50%;
+height: auto;
+box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.item1 {
+  display: flex;
+  grid-column-start: 1;
+  grid-column-end: span 6;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.item2 {
+  position: relative;
+  grid-column-start: 1;
+  grid-row-start: 3;
+  grid-column-end: span 6;
+}
+
+.item3 {
+  grid-column-start: 1;
+  grid-column-end: span 3;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  position: relative;
+  overflow: hidden;
+}
+
+.item4 {
+  grid-column-start: 4;
+  grid-column-end: span 3;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  position: relative;
+  overflow: hidden;
+}
+
+.item5 {
+  display: flex;
+  grid-column-start: 1;
+  grid-column-end: span 6;
+  grid-row-start: 4;
+  grid-row-end: 4;
+  position: relative;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+.time {
+font-size: 250%;
+}
+
+
+.progressblock {
+display: flex;
+position: absolute;
+left: 0px;
+bottom: 0px;
+background-color: rgb(216 0 0 / 53%) !important;
+width: 100%;
+height: 33%;
+flex-direction: column;
+justify-content: flex-end;
+}
+
+.progress {
+width: 90%;
+margin: 0 auto;
+background-color: #a7a197;
+height: 30px;
+border-radius: 25px;
+opacity: 0.7;
+overflow: hidden;
+
+}
+
+.bg-success {
+    --bs-bg-opacity: 1;
+    background-color: rgb(216 0 0 / 53%) !important;
+}
+
+.progress-bar {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ /*overflow: hidden; */
+ color: #fff;
+ text-align: center;
+ white-space: nowrap;
+ background-color: #0d6efd;
+ transition: width 2s;
+ height: 30px;
+ border-bottom-left-radius: 25px;
+ border-top-left-radius: 25px;
+}
+@media(min-width: 97%){
+.progress-bar {
+ border-bottom-right-radius: 25px;
+ border-top-right-radius: 25px;
+}
+
